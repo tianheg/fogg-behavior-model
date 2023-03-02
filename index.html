@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Use canvas implement Fogg Behavior Model.">
+  <title>Fogg Behavior Model by tianheg</title>
+  <link rel="shortcut icon" href="favicon.png">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    button {
+      margin-top: 1rem;
+    }
+
+    div {
+      text-align: center;
+      width: 1000px;
+      height: 600px;
+      position: relative;
+      border: 1px solid black;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    #point {
+      z-index: 2;
+    }
+
+    #fogg {
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Fogg Behavior Model</h1>
+
+  <div>
+    <canvas id="fogg" width="1000" height="600"></canvas>
+    <canvas id="point" width="1000" height="600"></canvas>
+  </div>
+  <button id="saveButton">Save Image</button>
+  <script src="script.js"></script>
+</body>
+
+</html>
