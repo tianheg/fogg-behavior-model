@@ -1,4 +1,4 @@
-function draw() {
+function drawLine() {
   const canvas = document.getElementById("fogg");
   const ctx = canvas.getContext("2d");
 
@@ -111,13 +111,9 @@ function drawPoint() {
     ctx.fillText("Ability", state.x - 150, canvas.height - 14);
   };
 
-  canvas.addEventListener("mousedown", pointerDown(state));
-  canvas.addEventListener("mousemove", pointerMove(state));
-  canvas.addEventListener("mouseup", pointerUp(state));
-
-  canvas.addEventListener("touchstart", pointerDown(state));
-  canvas.addEventListener("touchmove", pointerMove(state));
-  canvas.addEventListener("touchend", pointerUp(state));
+  canvas.addEventListener("pointerdown", pointerDown(state));
+  canvas.addEventListener("pointermove", pointerMove(state));
+  canvas.addEventListener("pointerup", pointerUp(state));
 
   function pointerDown(state) {
     return function (e) {
@@ -185,7 +181,6 @@ function saveImage() {
   });
 }
 
-draw();
+drawLine();
 drawPoint();
 saveImage();
-
